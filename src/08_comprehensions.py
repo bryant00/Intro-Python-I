@@ -10,17 +10,17 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
-for x in range(1,6):
-	y.append(x)
+y = [x for x in range(1, 6)]
+
+# y.append(x)
 print(y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
-for x in range(10):
-	y.append(x**3)
+y = [x**3 for x in range(10)]
+# for x in range(10):
+#     y.append(x**3)
 print(y)
 
 # Write a list comprehension to produce the uppercase version of all the
@@ -28,17 +28,18 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
-for x in a:
-	x.upper()
+y = [x.upper() for x in a]
+# for x in a:
+#     x.upper()
 print(a)
 
 # Use a list comprehension to create a list containing only the _even_ elements
 # the user entered into list x.
 
 x = input("Enter comma-separated numbers: ").split(',')
-
+print(x)
+# x = ['1', '2', '3', '4', '5']
 # What do you need between the square brackets to make it work?
-y = []
+y = [z for z in x if int(z) % 2 == 0]
 
 print(y)
